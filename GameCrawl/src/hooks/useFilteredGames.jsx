@@ -13,7 +13,6 @@ export default function useFilteredGames(allGames) {
   }
 
   function handleFilteredGames(filterBy, ...values) {
-    console.log(filterBy, values);
     const data = allGames.filter((game) => {
       for (let value of values) {
         if (filterBy === "id") {

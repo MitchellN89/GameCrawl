@@ -61,14 +61,11 @@ export function UserProvider({ children }) {
     const collections = user.collections.filter((item) => {
       return id != item;
     });
-
-    console.log("remove", id, collections);
     setUser({ ...user, collections });
   }
 
   function addGame(id) {
     const { collections } = user;
-    console.log("add", id, collections);
     setUser({ ...user, collections: [...collections, id] });
   }
 

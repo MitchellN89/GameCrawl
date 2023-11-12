@@ -5,7 +5,7 @@ import { useAllGamesContext } from "../../context/AllGamesProvider";
 import useFilteredGames from "../../hooks/useFilteredGames";
 import { useEffect } from "react";
 
-const CollectionNavBarContainer = styled("div")(({ theme }) => ({
+const CollectionNavBarContainer = styled("div")(() => ({
   width: "300px",
   height: "calc(100vh - 56px)",
   position: "fixed",
@@ -25,8 +25,6 @@ export default function CollectionNavBar({
 }) {
   const { allGames } = useAllGamesContext();
   const [filteredGames, handleFilteredGames] = useFilteredGames(allGames);
-
-  console.log("Navbar", setCurrentGameId);
 
   useEffect(() => {
     handleFilteredGames("id", ...user.collections);

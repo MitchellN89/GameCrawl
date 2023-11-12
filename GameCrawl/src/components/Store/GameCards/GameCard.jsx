@@ -28,7 +28,6 @@ export default function GameCard({
       variant="contained"
       onClick={() => {
         userDispatch({ type: "addGame", addValue: id });
-        console.log("IN BUTTON", id);
       }}
       sx={{ fontSize: "8pt" }}
       size="small"
@@ -41,7 +40,6 @@ export default function GameCard({
   const removeBtn = (
     <Button
       onClick={() => {
-        console.log("IN BUTTON", id);
         userDispatch({ type: "removeGame", removeValue: id });
       }}
       sx={{ fontSize: "8pt" }}

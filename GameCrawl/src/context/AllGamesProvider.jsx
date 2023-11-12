@@ -7,7 +7,7 @@ export function AllGamesProvider({ children }) {
 
   useEffect(() => {
     let ignore = false;
-    fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
+    fetch("https://ree-to-play-games-database.p.rapidapi.com/api/games", {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "32b9ac705fmshfe912da10fd865cp1b780bjsn8a6c8659eee3",
@@ -22,20 +22,6 @@ export function AllGamesProvider({ children }) {
               return a.title.localeCompare(b.title);
             })
           );
-          console.log(data);
-          // ---
-          const cat = [];
-          data.forEach((game) => {
-            if (!cat.includes(game.genre.trim())) {
-              cat.push(game.genre.trim());
-            }
-          });
-          console.log(
-            cat.sort((a, b) => {
-              return a.localeCompare(b);
-            })
-          );
-          // ---
         }
       });
 

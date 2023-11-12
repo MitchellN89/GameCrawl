@@ -4,22 +4,21 @@ import ControlButtons from "./ControlButtons";
 import GameDetails from "./GameDetails";
 import GameSpecs from "./GameSpecs";
 
-const ContentContainer = styled("div")(({}) => ({
+const ContentContainer = styled("div")(() => ({
   padding: "20px",
 }));
 
-const GameFeatureContainer = styled("div")(({}) => ({
+const GameFeatureContainer = styled("div")(() => ({
   marginLeft: "300px",
 }));
 
-const GameFeatureImg = styled("img")(({}) => ({
+const GameFeatureImg = styled("img")(() => ({
   width: "100%",
   maxHeight: "300px",
   objectFit: "cover",
 }));
 
 export default function GameFeature({ currentGame, setCurrentGameId }) {
-  console.log("Current Game: ", currentGame);
   return (
     <GameFeatureContainer>
       <GameFeatureImg src={currentGame.thumbnail}></GameFeatureImg>
