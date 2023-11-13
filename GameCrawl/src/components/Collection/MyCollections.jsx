@@ -15,8 +15,7 @@ export default function MyCollections() {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "32b9ac705fmshfe912da10fd865cp1b780bjsn8a6c8659eee3",
+          "X-RapidAPI-Key": "", // Please enter your own key here from RapidAPI
           "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
         },
       }
